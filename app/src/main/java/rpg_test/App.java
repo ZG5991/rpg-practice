@@ -3,23 +3,21 @@
  */
 package rpg_test;
 
+import rpg_test.GameStateHandling.GameStateHandler;
+import rpg_test.GameStateHandling.PcCommanderDashboard;
+
 public class App {
-
-    public String getGreeting() {
-        return "Hello World!";
-    }
-
-    public static void runUI() {
-
-        uiPrinter.pc_chara_create();
-        uiPrinter.pc_Commands();
-       
-    }
 
     public static void main(String[] args) {
 
-       runUI();
-        
-        //System.out.println(new App().getGreeting());
+        new App().runUI();
+
     }
+
+    private void runUI() {
+
+        new GameStateHandler().pc_chara_create();
+        new PcCommanderDashboard().console();
+    }
+
 }
