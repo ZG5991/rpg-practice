@@ -4,7 +4,6 @@ package rpg_test.PlayerCharacterHandling;
 import rpg_test.GameStateHandling.Color;
 import rpg_test.GameStateHandling.PlayerInputHandler;
 
-import java.util.Objects;
 import java.util.Random;
 
 public class PlayerCharacterHandler {
@@ -15,8 +14,9 @@ public class PlayerCharacterHandler {
   private static String name;
   private static int age;
   private static String race;
-  private static String charjob;
+  private static String charJob;
   private PlayerInputHandler inputHandler = new PlayerInputHandler();
+
   //stats
   private static int level;
   private static int health;
@@ -35,8 +35,7 @@ public class PlayerCharacterHandler {
     this.name = name;
     this.age = age;
     this.race = race;
-    this.charjob = job;
-
+    this.charJob = job;
   }
 
 public String raceQuery() {
@@ -96,8 +95,8 @@ public String jobQuery() {
 
   public void printStats() {
     System.out.println(
-            Color.ANSI_PURPLE + "-STATS-\n" +
-    name +", "+ race +" "+ charjob  + "\n" +
+    Color.ANSI_PURPLE + "-STATS-\n" +
+    name +", "+ race +" "+ charJob  + "\n" +
     age +" yrs old \n" +
     "LV: " + level + "\n" + 
     "HP: " + health + "\n" +
@@ -139,7 +138,8 @@ public String jobQuery() {
 
   public void jobsModifiers() {
 
-    if (Objects.equals(charjob, "Wizard"))
+
+    if (charJob == "Wizard")
     {//modifiers
     health += 1;
     stamina += 3;
@@ -147,7 +147,7 @@ public String jobQuery() {
     dexterity += 4;
     }
 
-    if (Objects.equals(charjob, "Fighter"))
+    if (charJob == "Fighter")
     {
     health += 6;
     stamina += 5;
@@ -155,7 +155,8 @@ public String jobQuery() {
     strength += 4;
     }
 
-    if (Objects.equals(charjob, "Hunter"))
+
+    if (charJob == "Hunter")
     {
     health += 2;
     stamina += 3;
