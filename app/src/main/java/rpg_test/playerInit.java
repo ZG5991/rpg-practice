@@ -11,7 +11,7 @@ public class playerInit {
   private static String name;
   private static int age;
   private static String race;
-  private static String charjob;
+  private static String charJob;
 
   //stats
   public static int level;
@@ -30,7 +30,7 @@ public class playerInit {
     playerInit.name = name;
     playerInit.age = age;
     playerInit.race = race;
-    playerInit.charjob = job;
+    playerInit.charJob = job;
 
   }
 
@@ -90,7 +90,7 @@ public static String jobQuery() {
   public static void printStats() {
     System.out.println(
       "-STATS-\n" +  
-    name +", "+ race +" "+ charjob  + "\n" +
+    name +", "+ race +" "+ charJob  + "\n" +
     age +" yrs old \n" +
     "LV: " + level + "\n" + 
     "HP: " + health + "\n" +
@@ -135,7 +135,7 @@ public static String jobQuery() {
 
   public void jobsModifiers() {
 
-    if (charjob == "Wizard")
+    if (charJob == "Wizard")
     {//modifiers
     health += 1;
     stamina += 3;
@@ -144,7 +144,7 @@ public static String jobQuery() {
     strength += 0;
     }
 
-    if (charjob == "Fighter") 
+    if (charJob == "Fighter") 
     {
     health += 6;
     stamina += 5;
@@ -153,7 +153,7 @@ public static String jobQuery() {
     strength += 4;
     }
 
-    if (charjob == "Hunter") 
+    if (charJob == "Hunter") 
     {
     health += 2;
     stamina += 3;
