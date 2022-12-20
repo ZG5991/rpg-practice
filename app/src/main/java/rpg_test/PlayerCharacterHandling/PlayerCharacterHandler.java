@@ -1,42 +1,48 @@
 
-package rpg_test;
+package rpg_test.PlayerCharacterHandling;
 
+import rpg_test.GameStateHandling.Color;
+import rpg_test.GameStateHandling.PlayerInputHandler;
+
+import java.util.Objects;
 import java.util.Random;
 
-public class playerInit {
+public class PlayerCharacterHandler {
 
-  public static Random ran = new Random();
+  private Random ran = new Random();
 
   //basic info
   private static String name;
   private static int age;
   private static String race;
   private static String charjob;
-
+  private PlayerInputHandler inputHandler = new PlayerInputHandler();
   //stats
-  public static int level;
-  public static int health;
-  public static int stamina;
-  public static int intelligence;
-  public static int dexterity;
-  public static int strength;
+  private static int level;
+  private static int health;
+  private static int stamina;
+  private static int intelligence;
+  private static int dexterity;
+  private static int strength;
 
   //simple combat modifiers, affected by combat stats(STR,DEX,INT) + equipped armor/weapons(not yet implemented)
 //   public int atk;
 //   public int def;
 
-  public playerInit(String name, int age, String race, String job) {
+  public PlayerCharacterHandler() {}
 
-    playerInit.name = name;
-    playerInit.age = age;
-    playerInit.race = race;
-    playerInit.charjob = job;
+  public PlayerCharacterHandler(String name, int age, String race, String job) {
+    this.name = name;
+    this.age = age;
+    this.race = race;
+    this.charjob = job;
 
   }
 
-public static String raceQuery() {
+public String raceQuery() {
   
-    String selectRace = uiInit.getTextInput("What sort of creature are you? (please type a corresponding digit) \n 1. Human \n 2. Elf \n 3. Dwarf"); 
+    String selectRace = inputHandler.getTextInput("What sort of creature are you? (please type a corresponding digit) " +
+            "\n 1. Human \n 2. Elf \n 3. Dwarf");
 
        String race = selectRace;
 
@@ -59,9 +65,10 @@ public static String raceQuery() {
 
 }
 
-public static String jobQuery() {
+public String jobQuery() {
 
-  String selectJob = uiInit.getTextInput("What is your vocation? (please type a corresponding digit) \n 1. Wizard \n 2. Fighter \n 3. Hunter"); 
+  String selectJob = inputHandler.getTextInput("What is your vocation? (please type a corresponding digit) " +
+          "\n 1. Wizard \n 2. Fighter \n 3. Hunter");
 
     String job = selectJob;
 
@@ -87,9 +94,9 @@ public static String jobQuery() {
 
 }
 
-  public static void printStats() {
+  public void printStats() {
     System.out.println(
-      "-STATS-\n" +  
+            Color.ANSI_PURPLE + "-STATS-\n" +
     name +", "+ race +" "+ charjob  + "\n" +
     age +" yrs old \n" +
     "LV: " + level + "\n" + 
@@ -98,62 +105,57 @@ public static String jobQuery() {
     "INT: " + intelligence + "\n" +
     "DEX: " + dexterity + "\n" +
     "STR: " + strength 
-    );
+    + Color.ANSI_RESET);
       
   }
 
   public void getRaceTraits() {
 
-    if (race.equals("Human")) 
-    {
-      health += 2;
-      stamina += 4;
-      intelligence += 3;
-      dexterity += 3;
-      strength += 4;
-    } else
-
-    if (race.equals("Elf")) 
-    {
-      health += 3;
-      stamina += 2;
-      intelligence += 5;
-      dexterity += 4;
-      strength += 2;
-    } else
-
-    if (race.equals("Dwarf")) 
-    {
-      health += 5;
-      stamina += 4;
-      intelligence += 2;
-      dexterity += 2;
-      strength += 6;
+    switch (race) {
+      case "Human":
+        health += 2;
+        stamina += 4;
+        intelligence += 3;
+        dexterity += 3;
+        strength += 4;
+        break;
+      case "Elf":
+        health += 3;
+        stamina += 2;
+        intelligence += 5;
+        dexterity += 4;
+        strength += 2;
+        break;
+      case "Dwarf":
+        health += 5;
+        stamina += 4;
+        intelligence += 2;
+        dexterity += 2;
+        strength += 6;
+        break;
     }
 
   }
 
   public void jobsModifiers() {
 
-    if (charjob == "Wizard")
+    if (Objects.equals(charjob, "Wizard"))
     {//modifiers
     health += 1;
     stamina += 3;
     intelligence += 7;
     dexterity += 4;
-    strength += 0;
     }
 
-    if (charjob == "Fighter") 
+    if (Objects.equals(charjob, "Fighter"))
     {
     health += 6;
     stamina += 5;
-    intelligence += 0;
     dexterity += 2;
     strength += 4;
     }
 
-    if (charjob == "Hunter") 
+    if (Objects.equals(charjob, "Hunter"))
     {
     health += 2;
     stamina += 3;
