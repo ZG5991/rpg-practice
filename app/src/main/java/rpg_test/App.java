@@ -4,7 +4,6 @@
 package rpg_test;
 
 import rpg_test.GameStateHandling.GameStateHandler;
-import rpg_test.GameStateHandling.PcCommanderDashboard;
 
 public class App {
 
@@ -16,8 +15,8 @@ public class App {
 
     private void runUI() {
 
-        new GameStateHandler().pc_chara_create();
-        new PcCommanderDashboard().console();
+        new GameStateHandler().pcCharaCreate();
+        new GameStateHandler().console();
     }
 
 }
