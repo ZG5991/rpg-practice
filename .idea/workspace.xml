@@ -5,13 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a3000bc7-94bf-45bb-bfc1-db2ca693127e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/rpg_test/GameStateHandling/Color.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/rpg_test/GameStateHandling/GameStateHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/rpg_test/GameStateHandling/PcCommanderDashboard.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/rpg_test/GameStateHandling/PlayerInputHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/rpg_test/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/rpg_test/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/rpg_test/GameStateHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/rpg_test/PlayerCharacterHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/rpg_test/PlayerCharacterHandling/PlayerCharacterHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/rpg_test/GameStateHandling/GameStateHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/rpg_test/GameStateHandling/GameStateHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/rpg_test/GameStateHandling/PlayerCharacter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/rpg_test/GameStateHandling/PlayerCharacter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/rpg_test/GameStateHandling/PlayerInputHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/rpg_test/GameStateHandling/PlayerInputHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/rpg_test/PlayerCharacterHandling/PlayerCharacterHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/rpg_test/PlayerCharacterHandling/PlayerCharacterHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,5 +115,26 @@
       <updated>1666020310373</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.util.InputMismatchException" package="java.util" />
+          <option name="timeStamp" value="2" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
