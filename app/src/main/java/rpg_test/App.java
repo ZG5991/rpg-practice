@@ -14,9 +14,7 @@ public class App {
     }
 
     private void runUI() {
-
-        new GameStateHandler().pcCharaCreate();
-        new GameStateHandler().console();
+        new GameStateHandler().mainMenu();
     }
 
 }
