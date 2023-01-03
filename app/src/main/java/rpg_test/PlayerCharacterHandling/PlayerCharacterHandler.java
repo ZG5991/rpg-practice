@@ -2,7 +2,6 @@
 package rpg_test.PlayerCharacterHandling;
 
 import rpg_test.GameStateHandling.Color;
-import rpg_test.GameStateHandling.PlayerCharacter;
 import rpg_test.GameStateHandling.PlayerInputHandler;
 
 import java.util.Objects;
@@ -137,6 +136,8 @@ public class PlayerCharacterHandler{
     
   }
 
+  public void setLocation(String location) { GlobalPlayerVariables.location = location; }
+
   public void statsRandomRoller(){
    //randomly initializes stats when called. Use to roll base attributes for new character.
   GlobalPlayerVariables.level =+ 1;
@@ -153,6 +154,8 @@ class GlobalPlayerVariables {
   public static String name;
   public static String race;
   public static String job;
+
+  public static String location;
   public static int level;
   public static int health;
   public static int stamina;
