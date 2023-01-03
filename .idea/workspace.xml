@@ -5,10 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a3000bc7-94bf-45bb-bfc1-db2ca693127e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/rpg_test/GameStateHandling/TownHubHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/rpg_test/NPCHandling/NPCGuardsman.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/rpg_test/NPCHandling/NPCSuperClass.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/rpg_test/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/rpg_test/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/rpg_test/GameStateHandling/GameStateHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/rpg_test/GameStateHandling/GameStateHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/rpg_test/GameStateHandling/PlayerInputHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/rpg_test/GameStateHandling/PlayerInputHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/rpg_test/GameStateHandling/PlayerCharacter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/rpg_test/PlayerCharacterHandling/PlayerCharacterHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/rpg_test/PlayerCharacterHandling/PlayerCharacterHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

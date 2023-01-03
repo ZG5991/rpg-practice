@@ -7,6 +7,7 @@ public class GameStateHandler {
     public boolean characterHasBeenCreated = false;
     private PlayerInputHandler inputHandler = new PlayerInputHandler();
     private PlayerCharacterHandler characterHandler = new PlayerCharacterHandler();
+    private TownHubHandler townHubHandler = new TownHubHandler();
 
     public void mainMenu() {
         String console;
@@ -27,8 +28,7 @@ public class GameStateHandler {
                 pcCharaCreate();
             } else
                 if (console.equalsIgnoreCase("start") && characterHasBeenCreated) {
-                    System.out.println("Gameplay doesn't exist yet.");
-                    mainMenu();
+                    townHubHandler.townGate();
             }
             if (console.equalsIgnoreCase("load")) {
                 System.out.println("Feature not implemented.");
@@ -62,7 +62,7 @@ public class GameStateHandler {
 
         characterHasBeenCreated = true;
 
-        mainMenu();
+        townHubHandler.townGate();
 
     }
 
