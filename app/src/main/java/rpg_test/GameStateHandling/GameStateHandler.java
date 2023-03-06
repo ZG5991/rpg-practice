@@ -62,7 +62,7 @@ public class GameStateHandler {
 
         characterHasBeenCreated = true;
 
-        townHubHandler.townGate();
+        townHubHandler.townJail();
 
     }
 
