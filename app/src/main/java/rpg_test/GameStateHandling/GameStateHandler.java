@@ -2,12 +2,26 @@ package rpg_test.GameStateHandling;
 
 import rpg_test.PlayerCharacterHandling.PlayerCharacterHandler;
 
+import javax.swing.*;
+
 
 public class GameStateHandler {
     public boolean characterHasBeenCreated = false;
     private PlayerInputHandler inputHandler = new PlayerInputHandler();
     private PlayerCharacterHandler characterHandler = new PlayerCharacterHandler();
     private TownHubHandler townHubHandler = new TownHubHandler();
+
+    public void displayGameInformation(String information) {
+        JFrame frame = new JFrame("Game Information");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(400, 300);
+
+        JTextArea textArea = new JTextArea(information);
+        textArea.setEditable(false);
+
+        frame.add(textArea);
+        frame.setVisible(true);
+    }
 
     public void mainMenu() {
         String console;
