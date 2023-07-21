@@ -3,18 +3,22 @@
  */
 package rpg_test;
 
+import rpg_test.Display.GridFrame;
 import rpg_test.GameStateHandling.GameStateHandler;
 
 public class App {
 
     public static void main(String[] args) {
 
+        GridFrame town = new GridFrame(800, 600, 16, "rpg_test/images/town.png");
         new App().runUI();
+
 
     }
 
     private void runUI() {
-        new GameStateHandler().mainMenu();
+        GameStateHandler handler = new GameStateHandler();
+        handler.mainMenu();
     }
 
 }

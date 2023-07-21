@@ -1,9 +1,12 @@
 package rpg_test.NPCHandling;
 import rpg_test.GameStateHandling.Color;
 import rpg_test.GameStateHandling.PlayerInputHandler;
+import rpg_test.GameStateHandling.TownHubHandler;
+
 public class NPCGuardsman extends NPCSuperClass {
 
     private PlayerInputHandler inputHandler = new PlayerInputHandler();
+    private TownHubHandler townHubHandler = new TownHubHandler();
     private boolean isFriendly = true;
 
     public NPCGuardsman() {
@@ -21,7 +24,9 @@ public class NPCGuardsman extends NPCSuperClass {
                 guardDialogueFriend = inputHandler.getTextInput("How can I be of service? \n" +
                         "1. 'How are things?'\n" +
                         "2. 'What can I do here?'\n" +
-                        "3. 'Don't talk to me.'");
+                        "3. 'Can I leave town?'\n" +
+                        "4. 'Don't talk to me.'\n" +
+                        "5. 'Goodbye.'");
 
                 if (guardDialogueFriend.equalsIgnoreCase("1")) {
                     System.out.println("So far, nothing too terrible has happened. \n Crime is down these recent years. \n" +
@@ -37,14 +42,23 @@ public class NPCGuardsman extends NPCSuperClass {
                     NPCDialogue();
 
                 } else if (guardDialogueFriend.equalsIgnoreCase("3")) {
+                    System.out.println("I'm afraid I can't allow anyone to leave right now.");
+                    NPCDialogue();
+
+                } else if (guardDialogueFriend.equalsIgnoreCase("4")) {
                     isFriendly = false;
                     System.out.println("Watch your tone with me, knave. I'm watching you.");
                     NPCDialogue();
+                } else if (guardDialogueFriend.equalsIgnoreCase("5")) {
+                    System.out.println("See ya!");
+                    townHubHandler.townSquare();
                 }
 
             } while (!guardDialogueFriend.equalsIgnoreCase("1") &&
                     !guardDialogueFriend.equalsIgnoreCase("2") &&
-                    !guardDialogueFriend.equalsIgnoreCase("3"));
+                    !guardDialogueFriend.equalsIgnoreCase("3") &&
+                    !guardDialogueFriend.equalsIgnoreCase("4") &&
+                    !guardDialogueFriend.equalsIgnoreCase("5"));
 
         } else if (!isFriendly) {
 
@@ -58,11 +72,11 @@ public class NPCGuardsman extends NPCSuperClass {
                         "2. 'Goodbye.'");
                 if(guardDialogueHostile.equalsIgnoreCase("1")) {
                     System.out.println("That's what I thought. Keep moving.");
-                    NPCDialogue();
+                    townHubHandler.townSquare();
                 } else
                 if (guardDialogueHostile.equalsIgnoreCase("2")) {
                     System.out.println("Keep walking.");
-                    return;
+                    townHubHandler.townSquare();
                 }
             } while (!guardDialogueHostile.equalsIgnoreCase("1"));
         }
